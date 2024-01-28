@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct FilmCellView: View {
+    var url: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(url)")) { image in
+            image
+                .resizable()
+                .scaledToFit()
+                .frame(height: 200)
+        } placeholder: {
+            ProgressView()
+        }
     }
 }
 
 #Preview {
-    FilmCellView()
+    FilmCellView(url: "")
 }
