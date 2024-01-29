@@ -23,6 +23,8 @@ enum EndPoint: String {
     case Trending_movie = "/3/trending/movie/day?api_key="
     case Popular = "/3/movie/popular?api_key="
     case top_raited = "/3/movie/top_rated?api_key="
+    case upcoming = "/3/movie/upcoming?api_key="
     case language = "&language=en-US&page=1"
+    case image_url = "https://image.tmdb.org/t/p/w500"
 }
 

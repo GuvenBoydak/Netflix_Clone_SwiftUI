@@ -10,11 +10,12 @@ import SwiftUI
 struct FilmCellView: View {
     var url: String
     var body: some View {
-        AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(url)")) { image in
+        AsyncImage(url: URL(string: "\(EndPoint.image_url.rawValue)\(url)")) { image in
             image
                 .resizable()
                 .scaledToFit()
                 .frame(height: 200)
+                .cornerRadius(5)
         } placeholder: {
             ProgressView()
         }
