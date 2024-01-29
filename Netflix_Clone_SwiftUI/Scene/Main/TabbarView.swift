@@ -9,23 +9,25 @@ import SwiftUI
 
 struct TabbarView: View {
     init() {
+        UITabBar.appearance().backgroundColor = UIColor(named: ColorKey.blackWhite.rawValue)
         UITabBar.appearance().barTintColor = UIColor(named: ColorKey.blackWhite.rawValue)
         }
     
     var body: some View {
             TabView {
-                HomeView().tabItem {
+                HomeView()
+                    .tabItem {
                     Image(systemName: ImageKey.Tabbar.house.rawValue)
-                    Text("Anasayfa")
+                    Text(LocalizableStringKey.Tabbar.house.rawValue.locale())
                 }
-                Text("B")
+                NewAndPopularView()
                     .tabItem {
                         Image(systemName: ImageKey.Tabbar.newPopular.rawValue)
-                        Text("Yeni ve Populer")
+                        Text(LocalizableStringKey.Tabbar.newPopular.rawValue.locale())
                     }
-                Text("C").tabItem {
+                Text("Play").tabItem {
                     Image(systemName: ImageKey.Tabbar.myNetflix.rawValue)
-                    Text("Benim Netflix'im")
+                    Text(LocalizableStringKey.Tabbar.myNetflix.rawValue.locale())
                 }
             }
             .tint(Color(ColorKey.tabItemTint.rawValue))

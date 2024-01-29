@@ -21,4 +21,10 @@ struct Movie: Codable {
     let vote_count: Int?
     let release_date: String?
     let vote_average: Double
+    
+
+}
+struct DayAndMountFormat {
+    let mount: String
+    let day: String
 }

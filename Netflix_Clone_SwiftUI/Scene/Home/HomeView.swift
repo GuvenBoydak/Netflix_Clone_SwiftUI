@@ -71,18 +71,10 @@ struct HomeView: View {
                 }.padding(.horizontal)
                     .background(
                         LinearGradient(gradient: Gradient(colors: [.clear, .primary]), startPoint: .top, endPoint: .bottom)
-                            .edgesIgnoringSafeArea(.all)
-                    )
-                    .navigationBarItems(leading:
-                                            Text(LocalizableStringKey.HomeView.forGuven.rawValue.locale())
-                        .font(.title3)
-                        .bold()
-                        .foregroundStyle(Color(ColorKey.blackWhite.rawValue)),
-                                        trailing: HStack {
-                        Image(systemName: ImageKey.HomeImage.wifi.rawValue)
-                        Image(systemName: ImageKey.HomeImage.magnify.rawValue)
-                    })
+                            .edgesIgnoringSafeArea(.all))
+                   
             }
+            .modifier(NavigationBarModifier(title: LocalizableStringKey.HomeView.forGuven.rawValue))
         }
     }
 }
