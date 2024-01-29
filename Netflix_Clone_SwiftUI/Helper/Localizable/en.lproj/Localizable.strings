@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Netflix_Clone_SwiftUI
+
+  Created by Güven Boydak on 28.01.2024.
+  
+*/
+
+// Tabbar
+
+"Home Page" = "Home Page";
+"New and Popular" = "New and Popular";
+"My Netflix" = "My Netflix";
+
+
+// Home
+"Trending Movie's" = "Trending Movie's";
+"Trending Tv's" = "Trending Tv's";
+"Populars" = "Populars";
+"Top Raited" = "Top Raited";
+"For Guven" = "For Guven";
+"Play" = "Play";
+"My List" = "My List";
+
+//NewAndPopular
+"Remind Me" = "Remind Me";
+"Notify" = "Notify";
+"Up Coming" = "Up Coming";
+"Release Date" = "Release Date";

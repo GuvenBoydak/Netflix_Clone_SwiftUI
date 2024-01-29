@@ -21,4 +21,8 @@ struct ImageKey {
         case magnify = "magnifyingglass"
         case wifi = "tv.badge.wifi"
     }
+    enum NewAndPopular: String {
+        case bell = "bell"
+        case notify = "togglepower"
+    }
 }

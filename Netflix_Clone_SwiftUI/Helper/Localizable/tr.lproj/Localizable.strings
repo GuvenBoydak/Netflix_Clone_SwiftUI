@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Netflix_Clone_SwiftUI
+
+  Created by Güven Boydak on 28.01.2024.
+  
+*/
+
+// Tabbar
+
+"Home Page" = "Ana Sayfa";
+"New and Popular" = "Yeni ve Popüler";
+"My Netflix" = "Benim Netflix'im";
+
+
+// Home
+"Trending Movie's" = "Trend Filmler";
+"Trending Tv's" = "Trend Tv Dizileri";
+"Populars" = "Popülerler";
+"Top Raited" = "En çok Oylanalar";
+"For Guven" = "Güven İçin";
+"Play" = "Oynat";
+"My List" = "Listem";
+
+//NewAndPopular
+"Remind Me" = "Bana Hatirlat";
+"Notify" = "Bildir";
+"Up Coming" = "Çok Yakında";
+"Release Date" = "Yayın Tarihi";

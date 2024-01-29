@@ -21,6 +21,12 @@ struct LocalizableStringKey {
         case popular = "Populars"
         case topRating = "Top Raited"
         case forGuven = "For Guven"
-        
+    }
+    
+    enum NewAndPopular: String {
+        case remindMe = "Remind Me"
+        case notify = "Notify"
+        case upComming = "Up Coming"
+        case releaseDate = "Release Date"
     }
 }
