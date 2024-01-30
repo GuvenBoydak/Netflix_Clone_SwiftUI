@@ -29,4 +29,15 @@ struct LocalizableStringKey {
         case upComming = "Up Coming"
         case releaseDate = "Release Date"
     }
+    
+    enum MyNetflix: String {
+        case favorite = "Your favorite"
+        case mylist = "mylist"
+        case seeAll = "seaAll"
+        case keepWatching = "KeepWatching"
+        case downland = "downlanded"
+        case notify = "notifyMyNetflix"
+        case suggest = "suggest"
+        case account = "account"
+    }
 }

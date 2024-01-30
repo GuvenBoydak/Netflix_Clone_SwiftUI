@@ -14,7 +14,7 @@ struct FilmCellView: View {
             image
                 .resizable()
                 .scaledToFit()
-                .frame(height: 200)
+                .frame(height: 150)
                 .cornerRadius(5)
         } placeholder: {
             ProgressView()
