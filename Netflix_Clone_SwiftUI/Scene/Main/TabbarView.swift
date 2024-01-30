@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TabbarView: View {
     init() {
-        UITabBar.appearance().backgroundColor = UIColor(named: ColorKey.blackWhite.rawValue)
+        UINavigationBar.appearance().barTintColor = UIColor(named: ColorKey.blackWhite.rawValue)
+        UITabBar.appearance().backgroundColor =  UIColor(named: ColorKey.blackWhite.rawValue)
         UITabBar.appearance().barTintColor = UIColor(named: ColorKey.blackWhite.rawValue)
         }
     
@@ -25,13 +26,13 @@ struct TabbarView: View {
                         Image(systemName: ImageKey.Tabbar.newPopular.rawValue)
                         Text(LocalizableStringKey.Tabbar.newPopular.rawValue.locale())
                     }
-                Text("Play").tabItem {
+                MyNetflixView()
+                    .tabItem {
                     Image(systemName: ImageKey.Tabbar.myNetflix.rawValue)
                     Text(LocalizableStringKey.Tabbar.myNetflix.rawValue.locale())
                 }
             }
             .tint(Color(ColorKey.tabItemTint.rawValue))
-            .background(Color.black)
     }
 }
 

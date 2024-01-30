@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewAndPopularView: View {
     @StateObject var newAndPopularsVM = NewAndPopularViewModel(networkManager: NetworkManager())
+    @State  var keyword: String = ""
     
     var body: some View {
         NavigationStack {
@@ -19,7 +20,7 @@ struct NewAndPopularView: View {
                         Text(LocalizableStringKey.NewAndPopular.upComming.rawValue.locale())
                             .font(.title3)
                             .bold()
-                            .foregroundStyle(Color(ColorKey.blackWhite.rawValue))
+                            .foregroundStyle(Color.tabItemTint)
                         Spacer()
                     }
                     ForEach(newAndPopularsVM.newPupulars,id:\.id) { data in
@@ -32,6 +33,7 @@ struct NewAndPopularView: View {
                     await newAndPopularsVM.getNewAndPupular()
                 }
             }
+            .background(Color.blackWhite)
             .modifier(NavigationBarModifier(title: LocalizableStringKey.HomeView.forGuven.rawValue))
         }
     }
@@ -54,7 +56,7 @@ private struct MovieCellView: View {
                 Text(newAndPopularVM.getMonthAndDay(date: movie.release_date ?? "").day)
                     .font(.title)
                     .bold()
-                    .foregroundStyle(Color(ColorKey.blackWhite.rawValue))
+                    .foregroundStyle(Color.tabItemTint)
                 Spacer()
             }
             VStack(alignment: .leading) {
@@ -71,11 +73,13 @@ private struct MovieCellView: View {
                         .font(.title2)
                         .lineLimit(2)
                         .bold()
+                        .foregroundStyle(Color.tabItemTint)
                     Spacer()
                     VStack(spacing: 7) {
                         Image(systemName: ImageKey.NewAndPopular.bell.rawValue)
                             .resizable()
                             .frame(width: 25,height: 25)
+                            .foregroundStyle(Color.tabItemTint)
                         Text(LocalizableStringKey.NewAndPopular.remindMe.rawValue.locale())
                             .font(.caption)
                             .foregroundStyle(.gray)
@@ -85,6 +89,7 @@ private struct MovieCellView: View {
                         Image(systemName: ImageKey.NewAndPopular.notify.rawValue)
                             .resizable()
                             .frame(width: 20,height: 20)
+                            .foregroundStyle(Color.tabItemTint)
                         Text(LocalizableStringKey.NewAndPopular.notify.rawValue.locale())
                             .font(.caption)
                             .foregroundStyle(.gray)
@@ -94,16 +99,16 @@ private struct MovieCellView: View {
                 HStack {
                     Text(LocalizableStringKey.NewAndPopular.releaseDate.rawValue.locale())
                         .font(.subheadline)
-                        .foregroundStyle(Color(ColorKey.blackWhite.rawValue))
+                        .foregroundStyle(Color.tabItemTint)
                         .padding(.trailing,-5)
                     Text(": \(newAndPopularVM.getMonthAndDay(date: movie.release_date ?? "").day) \(newAndPopularVM.getMonthAndDay(date: movie.release_date ?? "").mount)")
                         .font(.subheadline)
-                        .foregroundStyle(Color(ColorKey.blackWhite.rawValue))
+                        .foregroundStyle(Color.tabItemTint)
                 }
                 Text(movie.original_title ?? "")
                     .font(.headline)
                     .bold()
-                    .foregroundStyle(Color(ColorKey.blackWhite.rawValue))
+                    .foregroundStyle(Color.tabItemTint)
                     .padding(.vertical,1)
                 Text(movie.overview ?? "")
                     .font(.caption)

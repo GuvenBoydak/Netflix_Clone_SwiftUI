@@ -10,6 +10,10 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var homeVM = HomeViewModel(networkManager: NetworkManager())
     
+    init() {
+
+    }
+    
     var body: some View {
         NavigationStack {
             ScrollView(.vertical) {
@@ -69,12 +73,12 @@ struct HomeView: View {
                         }
                     }
                 }.padding(.horizontal)
-                    .background(
-                        LinearGradient(gradient: Gradient(colors: [.clear, .primary]), startPoint: .top, endPoint: .bottom)
-                            .edgesIgnoringSafeArea(.all))
-                   
             }
+            .background(
+                LinearGradient(gradient: Gradient(colors: [.secondary, .primary]), startPoint: .top, endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all))
             .modifier(NavigationBarModifier(title: LocalizableStringKey.HomeView.forGuven.rawValue))
+            
         }
     }
 }
