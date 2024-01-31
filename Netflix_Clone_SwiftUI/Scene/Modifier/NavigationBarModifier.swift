@@ -12,6 +12,7 @@ import SwiftUI
 struct NavigationBarModifier: ViewModifier {
     var title: String
     var isMyNetflix: Bool = false
+    @State private var isSheetPresented: Bool = false
     func body(content:Content) -> some View {
         content
             .navigationBarItems(leading:
@@ -22,12 +23,16 @@ struct NavigationBarModifier: ViewModifier {
                                 trailing: HStack {
                 Image(systemName: ImageKey.HomeImage.wifi.rawValue)
                     .foregroundStyle(Color.tabItemTint)
-                Button(action: {
-                    
-                }, label: {
-                    Image(systemName: ImageKey.HomeImage.magnify.rawValue)
-                        .foregroundStyle(Color.tabItemTint)
-                })
+                
+                Image(systemName: ImageKey.HomeImage.magnify.rawValue)
+                    .foregroundStyle(Color.tabItemTint)
+                    .onTapGesture {
+                        isSheetPresented.toggle()
+                    }
+                    .fullScreenCover(isPresented: $isSheetPresented) {
+                        SearchView().navigationBarBackButtonHidden()
+                    }
+                
                 if isMyNetflix {
                     Image(systemName: ImageKey.MYNetflix.setting.rawValue)
                         .foregroundStyle(Color.tabItemTint)

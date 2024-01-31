@@ -26,5 +26,7 @@ enum EndPoint: String {
     case upcoming = "/3/movie/upcoming?api_key="
     case language = "&language=en-US&page=1"
     case image_url = "https://image.tmdb.org/t/p/w500"
+    case search = "/3/search/movie?api_key="
+    case searchQuery = "&query="
 }
 
