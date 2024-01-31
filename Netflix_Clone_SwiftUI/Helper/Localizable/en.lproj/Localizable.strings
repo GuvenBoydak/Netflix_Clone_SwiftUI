@@ -38,3 +38,7 @@
 "notifyMyNetflix" = "Notifys";
 "suggest" = "Suggest";
 "account" = "Güven";
+
+// Search
+"recomendedTVMovie" = "Recommended TV series and movies";
+"searchMovieTVSeries" = "Search for TV series and movies";

@@ -40,4 +40,9 @@ struct LocalizableStringKey {
         case suggest = "suggest"
         case account = "account"
     }
+    
+    enum Search: String {
+        case searchText = "searchMovieTVSeries"
+        case recommended = "recomendedTVMovie"
+    }
 }

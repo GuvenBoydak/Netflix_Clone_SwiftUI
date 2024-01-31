@@ -37,3 +37,7 @@
 "notifyMyNetflix" = "Bildirimler";
 "suggest" = "Tavsiye Et";
 "account" = "Güven";
+
+// Search
+"recomendedTVMovie" = "Önerilen Dizi ve Filmler";
+"searchMovieTVSeries" = "Dizi ve Film arayın.";
