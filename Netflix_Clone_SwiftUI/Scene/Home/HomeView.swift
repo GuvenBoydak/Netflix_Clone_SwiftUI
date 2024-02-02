@@ -18,8 +18,9 @@ struct HomeView: View {
         NavigationStack {
             ScrollView(.vertical) {
                 VStack(alignment: .leading) {
-                    HeaderImageView()
+                    HeaderImageView(moviePoster: homeVM.populars.randomElement()?.poster_path ?? "")
                         .padding(.horizontal)
+                      
                     TitleTextView(title: LocalizableStringKey.HomeView.trendingMovie.rawValue.locale())
                     ScrollView(.horizontal) {
                         HStack {
@@ -88,9 +89,10 @@ struct HomeView: View {
 }
 
 private struct HeaderImageView: View {
+    var moviePoster: String
     var body: some View {
         ZStack {
-            AsyncImage(url: URL(string: "https://m.media-amazon.com/images/M/MV5BMDQ0NjgyN2YtNWViNS00YjA3LTkxNDktYzFkZTExZGMxZDkxXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg")) { image in
+            AsyncImage(url: URL(string: "\(EndPoint.image_url.rawValue)\(moviePoster)")) { image in
                 image
                     .resizable()
                     .scaledToFit()
